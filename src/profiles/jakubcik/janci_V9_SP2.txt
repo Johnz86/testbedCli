@@ -1,0 +1,25 @@
+[MAIN]
+installer= OneNDS-9207
+tbSubdir = V9SP2
+owner    = jakubcik
+vmHost   = runa
+vmType   = xen
+description = V9 SP2 Testbed
+
+[DATA_SOURCES]
+sourceDirADM = /opt/attng/Install/ADM/OneNDS_9.0/9.0.2-latest
+
+[ADM01]
+serverName = run-adm01
+
+[NDS01]
+serverName = run-nds01
+
+[NDS02]
+serverName = run-nds02
+
+[NDS03]
+serverName = run-nds03
+
+[NDS04]
+serverName = run-nds04

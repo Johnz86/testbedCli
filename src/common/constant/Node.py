@@ -1,0 +1,18 @@
+"""
+Created on 12.3.2013
+@author: Jan Jakubcik
+@description: Basic types of node setups.
+"""
+INSTAL_SERVER = 1;
+ADMINISTRATOR = 2;
+DIRECTORY_SERVER = 3;
+PROVISIONING_GATEWAY = 4;
+SYSTEM_MONITOR = 5;
+
+NODE_TYPE = {
+    INSTAL_SERVER: 'INS',
+    ADMINISTRATOR: 'ADM',
+    DIRECTORY_SERVER: 'NDS',
+    PROVISIONING_GATEWAY:'PGW',
+    SYSTEM_MONITOR: 'SIM'
+} 

@@ -1,0 +1,14 @@
+{
+   "environment":  {
+                    "TMP_DIR": "/tmp",
+                    "USE_CONSOLE_LOGGER": true,
+                    "BTRFS_ROOT": "/mnt/vmimages",
+                    "EXPORT_ROOT": "/mnt/backup",
+                    "SW_SOURCE_ROOT": "/opt/attng/Install",
+                    "LOG_ROOT": "/opt/attng/logs",
+                    "PROFILE_HOME": "/opt/attng/profiles",
+                    "NODE_INSTALL_DIR": "/opt/attngInstall",
+                    "SSH_KEY_PRIVATE" : "attKey.private",
+                    "SSH_OPTIONS": "-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o NumberOfPasswordPrompts=0 -o LogLevel=quiet"
+                }
+}
