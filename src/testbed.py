@@ -47,7 +47,9 @@ if __name__ == '__main__':
 
 @cli.command({'PROFILE':str,'status':True})
 def status(arguments):
-    print arguments
+    profile = Profiles.TestbedProfile(arguments['PROFILE'])
+    logging.info(profile.get_owner())
+
     
 @cli.command({'PROFILE':str,'start':True})
 def start(arguments):
