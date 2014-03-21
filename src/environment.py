@@ -9,7 +9,6 @@ import os
 import sys
 import logging
 import common.constant.Folders as FOLDER
-from libs.prettytable import PrettyTable
 from common.utils.JsonUtils import load_json_from_file
 
 class Singleton(type):
@@ -38,6 +37,12 @@ class Environment:
         ch.setLevel(logging.INFO)
         logger.addHandler(ch)
         logger.setLevel(logging.DEBUG)
+
+    def get_property(self, key, default="Not Specified."):
+        if(key in self.properties):
+            return self.properties['key']
+        else:
+            return default
 
     def load_properties(self):
         """Load enviroment variables."""

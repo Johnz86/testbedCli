@@ -48,8 +48,7 @@ if __name__ == '__main__':
 @cli.command({'PROFILE':str,'status':True})
 def status(arguments):
     profile = Profiles.TestbedProfile(arguments['PROFILE'])
-    logging.info(profile.get_owner())
-
+    logging.info(profile.get_all_servers())
     
 @cli.command({'PROFILE':str,'start':True})
 def start(arguments):
@@ -126,11 +125,11 @@ def list_installers(arguments):
 @cli.command({'list':True,'profiles':True})
 def list_profiles(arguments):
     profile_list = Profiles.load_profile_list(os.path.join(env.path, "resourceCache.pickle"))
-    Display.print_list_table("Profile list",profile_list)
+    Display.print_table_list("Profile list",profile_list)
 
 @cli.command({'list':True,'setup':True})
 def list_setup(arguments):
-    Display.print_key_value_table(env.properties)
+    Display.print_table_key_value(env.properties)
     
 @cli.command({'list':True,'status':True})
 def list_status(arguments):
