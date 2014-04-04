@@ -32,7 +32,7 @@ Options:
   --version     Show version.
 
 """
-from docopt import docopt
+from libs.docopt import docopt
 
 if __name__ == '__main__':
     arguments = docopt(__doc__, version='Simulator Manager 0.2')

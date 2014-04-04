@@ -21,7 +21,9 @@ Options:
 """
 import os.path
 import logging
+from common.utils import NetworkUtils
 import common.utils.DisplayUtils as Display
+import common.utils.NetworkUtils
 from common.profiles import Profiles
 from datetime import datetime
 from environment import env
@@ -48,8 +50,9 @@ if __name__ == '__main__':
 @cli.command({'PROFILE':str,'status':True})
 def status(arguments):
     profile = Profiles.TestbedProfile(arguments['PROFILE'])
-    logging.info(profile.get_all_servers())
-    
+    servers = NetworkUtils.ServerList(profile.get_all_hostnames())
+    servers.ping_all_hosts()
+
 @cli.command({'PROFILE':str,'start':True})
 def start(arguments):
     print arguments

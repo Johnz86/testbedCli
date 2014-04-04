@@ -36,7 +36,7 @@ class TestbedProfile:
     def get_all_nodes(self):
         return [item for item in self.data if str(item[:3]) in Node.NODE_TYPE.values()]
 
-    def get_all_servers(self):
+    def get_all_hostnames(self):
         return [self.data[item]['servername'] for item in self.get_all_nodes() if self.data[item].has_key("servername")]
 
     def get_node_types(self, *node_types):

@@ -10,7 +10,7 @@ description = V9 SP2 Testbed
 sourceDirADM = /opt/attng/Install/ADM/OneNDS_9.0/9.0.2-latest
 
 [ADM01]
-serverName = run-adm01
+serverName = run-adm02
 
 [NDS01]
 serverName = run-nds01
