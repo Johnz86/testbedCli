@@ -8,7 +8,7 @@
                     "LOG_ROOT": "/opt/attng/logs",
                     "PROFILE_HOME": "/opt/attng/profiles",
                     "NODE_INSTALL_DIR": "/opt/attngInstall",
-                    "SSH_KEY_PRIVATE" : "attKey.private",
+                    "SSH_KEY_PRIVATE" : "testbedKey.private",
                     "SSH_OPTIONS": "-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o NumberOfPasswordPrompts=0 -o LogLevel=quiet"
                 }
 }

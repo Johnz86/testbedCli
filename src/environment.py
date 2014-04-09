@@ -40,7 +40,7 @@ class Environment:
 
     def get_property(self, key, default="Not Specified."):
         if(key in self.properties):
-            return self.properties['key']
+            return self.properties[key]
         else:
             return default
 

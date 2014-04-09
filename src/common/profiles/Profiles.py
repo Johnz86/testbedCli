@@ -19,10 +19,10 @@ class TestbedProfile:
         return self.get_main().get("owner","Not Specified.")
 
     def get_vm_host(self):
-        return self.get_main().get("vmHost","Not Specified.")
+        return self.get_main().get("vmhost","Not Specified.")
 
     def get_vm_type(self):
-        return self.get_main().get("vmType","Not Specified.")
+        return self.get_main().get("vmtype","Not Specified.")
 
     def get_description(self):
         return self.get_main().get("description","Not Specified.")
@@ -31,7 +31,7 @@ class TestbedProfile:
         return self.get_main().get("java",env.get_property('JAVA_HOME'))
 
     def get_btrfs_subvolume_path(self):
-        return self.get_main().get("tbSubdir",env.get_property('BTRFS_ROOT'))
+        return self.get_main().get("tbsubdir",env.get_property('BTRFS_ROOT'))
 
     def get_all_nodes(self):
         return [item for item in self.data if str(item[:3]) in Node.NODE_TYPE.values()]
